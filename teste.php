@@ -1,3 +1,4 @@
+ftk,rhptrmjknmhkrt bkl nkthhnmkhbklhl
 <script>
 /*var regex = /javascript/i;
 var string = "JavaScript";
@@ -23,12 +24,15 @@ alert(str.match(/doce/ig));*/
 alert(str.match(/r[a-z]/ig));
 alert(str.replace(/r[a-z]/ig, "xxx"));*/
 
-var url = "www.xti.com.br/clientes-2011.html";
+/*var url = "www.xti.com.br/clientes-2011.html";
 //	 	  "http://www.xti.com.br/2011/clientes.jsp";
 var re = /www.xti.com.br\/\w{2,}-\d{4}\.html/;
 alert(re.test(url));
 re = /(www.xti.com.br)\/\w{2,}-\d{4}\.html/;
 alert(url.replace(re, "http://$1"));
+*/
+
+
 </script>
 <script>
 //comprimento de uma circunferencia com 30 de raio
