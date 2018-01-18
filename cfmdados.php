@@ -161,12 +161,12 @@ $varlogin 		= $_POST['login'];
 
  <script>
 
-         function limpa_formulário_cep() {
+     function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
             document.getElementById('rua').value=("");
             document.getElementById('bairro').value=("");
             document.getElementById('cidade').value=("");
-             document.getElementById('estado').value=("");
+            document.getElementById('estado').value=("");
  
     }
 
@@ -176,7 +176,7 @@ $varlogin 		= $_POST['login'];
             document.getElementById('rua').value=(conteudo.logradouro);
             document.getElementById('bairro').value=(conteudo.bairro);
             document.getElementById('cidade').value=(conteudo.localidade);
-              document.getElementById('estado').value=(conteudo.uf);
+            document.getElementById('estado').value=(conteudo.uf);
 
         } //end if.
         else {
