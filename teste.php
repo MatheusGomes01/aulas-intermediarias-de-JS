@@ -1,88 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame Remove this you use the htaccess-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome">
+
+
+	<title>Index</title>
+	<meta name="description" content="">
+	<meta name="author" content="Paulo">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<!-- Replace favicon ico & apple-touch-icon.png in the root domain and delete-->
+	<link rel="shortcut" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 </head>
-<meta charset="utf-8">
 <body>
+	<button id="btnBuscar">Buscar</button>
+	<p id="retorno">Aqui será o retorno</p>
+<script src="script.js" type="text/javascript">
 
-<h3>Expressões Regulares</h3>
-<form id="formulario">
-<fieldset>
-	<legend>Validação e Formatação</legend>
-	
-	<label for="cpf">CPF:<label>
-	<input type="text" name="cpf" />
+	document.getElementById("btnBuscar").onclick = function(){
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function(){
+			if(xmlHttp.readyState===4&&xmlHttp.status===200)
+				document.getElementById("retorno").innerHTML = xmlHttp.responseText;
+		};
+		xmlHttp.open("GET","curso.txt",true);
+		xmlHttp.send();
+	};
 
-	<label for="email">Email:<label>
-	<input type="text" name="email" />
-
-<a href="#" onclick="validar()">Validar</a>
-</fieldset>
-</form>
-
-<script>
-/*
-FUNÇÕES 
-- test()
-- exec()
-- str.match()
-- str.replace()
-
-MODIFICADORES
-- i
-- g
-- m
-
-METACARACTERES 
-- (-)
-- \w
-- \s
-- \d
-- ^
-- $
-
-QUANTIFICADORES
-- +
-- *
-- ?
-- {}
-
-AGRUPADORES
-- [0-9]
-- [a-z]*/
-	function validar(){
-		var formulario = document.getElementById("formulario");
-		var cpf = formulario.cpf;
-		var email = formulario.email;
-
-		var re_cpf = /^ ([\w+] {3}) ([\d] {3}) ([\d] {3}) ([\d] {2})$/;
-		var re_email = /^([\w-]+(\.[\w-]+)*) @ (( [\w-]+\.)*\w[\w-]{0,66}) \. ([a-z]{2,6}(\.[a-z]{2})?)$/i;
-
-		if (re_cpf.test(cpf.value)) {
-			cpf.value = cpf.value.replace(re_cpf, "$1.$2.$3-$4");
-		}else {
-			alert("CPF deve ter apenas 11 numeros, sem ponto ou traço");
-		}
-
-
-		if (re_email.test(email.value)){
-			alert("email invalido");
-		}
-	}
-
-	/*
-	FUNÇÕES dentro do objeto window.onload = function ()
-	confirm ();
-	prompt();
-	*/
-
-	
 </script>
-
-
-
-
-
 </body>
 </html>
