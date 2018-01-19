@@ -15,23 +15,16 @@
 
 </head>
 <body>
-	<input type="file" name="fotografia">
-<script src="script.js" type="text/javascript">
-document.getElementById("fotografia").onchange = function(e){
-	if(e.target.files != null && e.target.files.length != 0){
-		var arquivo = e.target.files[0];
-		var fd = new FormData();
-		fd.append("fotografia",arquivo);
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange=function(){
-			if(xmlhttp.readyState===4&xmlhttp.status===200)
-				alert(xmlhttp.responseText);
-		};
+	<label>Nome:</label>
+	<input type="text" name="tbNome" />
+	<label>idade:</label>
+	<input type="number" name="nIdade" />
+	<input type="file" name="ficheiro" />
+	<button id="btnEnviar">Enviar</button>
 
-		xmlhttp.open("POST","recebe.php",true);
-		xmlhttp.send(fd);
-	}
-};
+<script src="script.js" type="text/javascript">
+
+
 </script>
 </body>
 </html>

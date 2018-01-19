@@ -1,11 +1,13 @@
 <?
-if($_FILES);
+if($_POST){
+	$nome = $_POST['nome'];
+	$idade = $_POST['idade'];
+	$fotografia = $_FILES['fotografia'];
 
-	$arquivo = $_FILES['fotografia'];
-	if(move_uploaded_file($arquivo['tmp_name'], $arquivo['tmp_name'])){
-		echo 'Imagem enviada com sucesso';
-	}else{
-		echo 'Erro ao enviar imagem';
-	}
-	endif;
+	if(move_uploaded_file($fotografia['tmp_name'],$fotografia['name'])){
+		echo $nome.' '.$idade;
+	}else
+	echo 'Erro no processo';
+
+}
 ?>
