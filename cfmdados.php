@@ -32,8 +32,7 @@ $varnumero 		= $_POST['numero'];
 $varbairro 		= $_POST['bairro'];
 $varcidade 		= $_POST['cidade'];
 $varcep 		= $_POST['cep'];
-$varcep2 		= $_POST['cep2'];
-$varlogin 		= $_POST['login'];
+
 
 ?>
 
@@ -100,9 +99,9 @@ $varlogin 		= $_POST['login'];
     <p><tr><td><h5>Gênero:</td><td><input class="btn btn-mini" onkeypress="return Onlychars(event)"  
      value="<?=$_POST['sexo']?>" id="sexo" size="9" maxlength="9" disabled></section></td></tr></p>
     
-    <p><tr><td><h5>RG:</td><td><input class="btn btn-mini"  value="<?=$_POST['rg']?>-<?=$_POST['rg2']?>" id="rg " size="12" maxlength="12" disabled></td></tr></p>   
+    <p><tr><td><h5>RG:</td><td><input class="btn btn-mini"  value="<?=$_POST['rg']?>-<?=$_POST['rg2']?>" id="rg" size="12" maxlength="12" disabled></td></tr></p>   
     
-    <p><tr><td><h5>CPF:</td><td><input class="btn btn-mini" onkeypress="return Onlynumbers(event)" value="<?=$_ POST['cpf']?>-<?=$_POST['cpf2']?>" id="cpf" size="12" maxlength="12" disabled></td></tr></p> 
+    <p><tr><td><h5>CPF:</td><td><input class="btn btn-mini" onkeypress="return Onlynumbers(event)" value="<?=$_POST['cpf']?>-<?=$_POST['cpf2']?>" id="cpf" size="12" maxlength="12" disabled></td></tr></p> 
     
     </table>
 
@@ -124,7 +123,7 @@ $varlogin 		= $_POST['login'];
     <input class="btn btn-mini"  value="<?=$_POST['cidade']?>"  onkeypress="return Onlychars(event)" id="cidade" disabled></td></tr></p>
 
     <p><tr><td><h5>CEP:</td><td>
-    <input class="btn btn-mini"  value="<?=$_POST['cep']?>" id="cep"  onkeypress="return Onlynumbers(event)" size="9" maxlength="9" disabled  onblur="pesquisacep(this.value);"/></td></tr></p>
+    <input class="btn btn-mini"  pattern="^\w{5}\-\w{3}$" value="<?=$_POST['cep']?>" id="cep"  onkeypress="return Onlynumbers(event)" size="9" maxlength="9" disabled  onblur="pesquisacep(this.value);"/></td></tr></p>
 
     <p><tr><td><h5>Bairro:</td><td>
     <input class="btn btn-mini"  value="<?=$_POST['bairro']?>" onkeypress="return Onlychars(event)" id="bairro" disabled></td></tr></p>

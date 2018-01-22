@@ -15,13 +15,29 @@
 
 </head>
 <body>
-	<label>Nome:</label>
-	<input type="text" name="tbNome" />
-	<label>idade:</label>
+	<div>
+	<div><label>Nome:</label>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label>Sobreome:</label><div>
+	<div class="bnt bnt-mini"><input type="text" name="tbNome" />&nbsp;
+	<input type="text" name="tbSobrenome" /></div>
+	
+	
+	<p></p>
+	<div><label>idade:</label></div>
 	<input type="number" name="nIdade" />
-	<input type="file" name="ficheiro" />
-	<button id="btnEnviar">Enviar</button>
+	<p></p>
+	
 
+	<div><label>Data de Nascimento</label></div>
+	<input type="number" name="nIdade" />
+	<p></p>
+	<input type="file" name="ficheiro" />
+	<p></p>
+
+
+	<button id="btnEnviar">Enviar</button>
+</div>
 <script src="script.js" type="text/javascript">
 
 
