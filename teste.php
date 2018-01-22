@@ -6,49 +6,44 @@
 <body>
 
 <script>
-// scoopo global
-/*{{{{ var sera = 'será???';}}}}
-console.log(sera);*/
+// teste das constantes
+/*var semProblema = 1;
+var semProblema = 2;
+console.log('semProblema =', semProblema);
 
-//com var ou let dentro do {}
-/*var numero = 1;
-{
-	let nuemro = 2;
-	console.log('dentro =',numero);
-}
-console.log('fora =', numero);*/
-
-// let e var dentro do loop
-// com var o i=10, com let da um undefined
-/*for(let i = 0; i < 10; i++){}
-	console.log('i =', i);*/
-
-// com var sempre irá dar o "10", com let vai aparecer as funcs definidas.
-/*var funcs =[];
-for(let i = 0; i < 10; i++){
-	funcs.push(function(){
-		console.log(i);
-	});
-}
-funcs[2]();
-funcs[8]();*/
+var comProblema = 1;
+var comProblema = 2;
+console.log('comProblema =', comProblema)*/
 
 
-// erros de undefined com var e erros com let
-/*console.log('a =', a);
-var a = 2;
+// erro, por causa que tem que fazer a atribuição da constante e não pode atribuir o valor em outra linha.
 
-console.log('b =', b);
-let b = 2; */
+/*const a;
+a = 2;
+console.log('a =', a);*/
 
-// const
-var a = 2;
-{
-	const a = 3;
-	console.log(a);
-}
+/*var a = 2;
+var b = a; // copia do valor
 
-console.log(a);
+a --; // b continua com o valor original.
+
+b ++; // a continua com o valor original.
+
+console.log ('a =', a);*/
+
+/*var p1 = {nome: 'Ana'};
+var p2 = p1; //repete a constante anterior.
+p2.nome = 'Bia'; // altera a constante
+console.log('p1 =', p1);*/
+
+const produto = {
+	nome : 'Caneta',
+	preco: 2.59
+};
+produto.nome = 'Notebook';
+
+console.log(produto.nome);
+produto = {};
 
 
 </script>
