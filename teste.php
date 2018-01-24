@@ -42,15 +42,27 @@ return resultado.join('');
 var preco = 29.99, parcela = 11;
 console.log(real `1x de ${preco} ou 3x de ${parcela}`);*/
 
-var pessoa = {nome: 'Ana', idade: 20};
+/*var pessoa = {nome: 'Ana', idade: 20};
 var {nome, idade} = pessoa;
 console.log(nome,idade);
 
 var {nome: n, idade: i} = pessoa;
 console.log(n, i);
 var {genero, situacao = 'Ativa'} = pessoa;
-console.log(genero, situacao);
+console.log(genero, situacao);*/
 
+var pessoa = {
+
+nome: 'Ana',
+endereco: {rua: 'A', numero: 1000}
+};
+
+var { endereco: {rua, numero, cep} } = pessoa;
+console.log(rua, numero, cep);
+
+
+var { conta: { numero, agencia } } = pessoa;
+console.log(numero, agencia);
 </script>
 
 
