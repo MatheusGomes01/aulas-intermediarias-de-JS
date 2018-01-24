@@ -30,7 +30,7 @@ var status = 'Reprovado';
 console.log(tag `${aluno} está ${status}`);*/
 
 
-function real(strings, ...values){
+/*function real(strings, ...values){
 	const resultado = [];
 	values.forEach(function(value, index){
 		value = (typeof value == 'number')
@@ -40,7 +40,16 @@ function real(strings, ...values){
 return resultado.join('');
 }
 var preco = 29.99, parcela = 11;
-console.log(real`1x de ${preco} ou 3x de ${parcela}`);
+console.log(real `1x de ${preco} ou 3x de ${parcela}`);*/
+
+var pessoa = {nome: 'Ana', idade: 20};
+var {nome, idade} = pessoa;
+console.log(nome,idade);
+
+var {nome: n, idade: i} = pessoa;
+console.log(n, i);
+var {genero, situacao = 'Ativa'} = pessoa;
+console.log(genero, situacao);
 
 </script>
 
