@@ -26,7 +26,7 @@
         <a class="brand" href="http://lbca.com.br/"><i><font size="40" face="bombing"> LBCA </font></i></a>
         <ul class="nav">
 
-        <li class="active"><a href="file.html"><i class="icon-home icon-white"></i> Home</a></li>
+        <li class="active"><a href="index.php"><i class="icon-home icon-white"></i> Home</a></li>
         <li><a href="http://lbca.com.br/index.php/quem-somos"><i class="icon-book icon-white"></i> Historia </a></li>
          <li><a href="http://lbca.com.br/index.php/fale-conosco/"><i class="icon-comment icon-white"></i>Contato</a></li>
 
@@ -117,7 +117,8 @@ document.write('  '+todaysDate);
 
 
 
- <form method="post" class="form-horizontal" id="cadastro" name="f1"  action="cfmdados.php">
+ <form method="post" class="form-horizontal" id="cadastro" name="f1"  
+ action="cfmdados.php">
 
 
 
@@ -136,7 +137,7 @@ document.write('  '+todaysDate);
             <div class="controls">
     
             <input type="text" id="nome" name="nome" onkeypress="return Onlychars(event)"  
-            pattern="[a-z\s]+$" placeholder="Nome" required/>
+            pattern="[A-z\s]+$" placeholder="Nome" required >
             </div>
         </div>
 
@@ -146,7 +147,7 @@ document.write('  '+todaysDate);
             <label class="control-label" for="sobrenome" >Sobreome:</label>
             <div class="controls">
 
-            <input type="text" id="sobrenome" name="sobrenome" onkeypress="return Onlychars(event)"  pattern="[a-z\s]+$" placeholder="Sobrenome" required/>
+            <input type="text" id="sobrenome" name="sobrenome" onkeypress="return Onlychars(event)"  pattern="[A-z\s]+$" placeholder="Sobrenome" required/>
             </div>
         </div>
 

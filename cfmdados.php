@@ -7,12 +7,14 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <!-- JQuery -->
-<script src="https:code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https:code.jquery.com/jquery-3.2.1.js" integrity="
+sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <!-- HTML4 -->
 <meta http-equiv="Content-Type" content="text/html; chaset=utf-8">
 <!-- HTML5 -->
 <meta charset="utf-8">
-<body background="city.png">
+<body background="city.jpg">
+
 
 <?
 $varnome 	  	= $_POST['nome'];
@@ -30,22 +32,29 @@ $varcpf2 		= $_POST['cpf2'];
 $varrua 		= $_POST['rua'];
 $varnumero 		= $_POST['numero'];
 $varbairro 		= $_POST['bairro'];
-$varcidade 		= $_POST['cidade'];
+$varcidade      = $_POST['cidade'];
 $varcep 		= $_POST['cep'];
 
-
 ?>
+
+<form method="post" class="form-horizontal" id="cadastro1" name="f1"  
+ action="pagina.html">
 
 <div class="navbar navbar-inverse">
     <div class="navbar-inner">
 
-    <a class="brand" href="http://lbca.com.br/"><i><font size="40" face="bombing"> LBCA </font></i></a>
+    <a class="brand" href="http://lbca.com.br/">
+    <i><font size="40" face="bombing"> LBCA </font></i></a>
     <ul class="nav">
 
      
-      <li><a href="file.html"><i class="icon-home icon-white"></i> Home</a></li>
-       <li class="active"><a href="#"><i class="icon-list-alt icon-white"></i> Cadastro</a></li>      <li><a href="http://lbca.com.br/index.php/quem-somos"><i class="icon-book icon-white"></i> Historia </a></li>
-      <li><a href="http://lbca.com.br/index.php/fale-conosco/"><i class="icon-comment icon-white"></i>Contato</a></li>
+      <li><a href="index.php"><i class="icon-home icon-white"></i> Home</a></li>
+       <li class="active"><a href="#"><i class="icon-list-alt icon-white">
+       </i> Cadastro</a></li>      
+       <li><a href="http://lbca.com.br/index.php/quem-somos">
+       <i class="icon-book icon-white"></i> Historia </a></li>
+      <li><a href="http://lbca.com.br/index.php/fale-conosco/">
+      <i class="icon-comment icon-white"></i>Contato</a></li>
 
       </ul>
       </div>
@@ -82,26 +91,40 @@ $varcep 		= $_POST['cep'];
 
 <!-- DADOS PESSOAIS-->
 
-<legend><p class="btn bnt-mini btn-inverse" title="Por favor confira seus dados a baixo."> Dados Pessoais</legend>
+<legend><p class="btn bnt-mini btn-inverse" title="Por favor confira seus dados a baixo.">
+ Dados Pessoais</legend>
  <table  border="0" cellspacing="10">
 
 
 	<p><tr><td><h5>Nome:</h6></td>
-	<td><input class="btn span3" value="<?=$_POST['nome']?> &nbsp; <?=$_POST['sobrenome']?>" id="nome" onkeypress="return Onlychars(event)" disabled><b onclick="myPencil0()"><i class="icon-pencil" title="Para alterar basta clicar aqui, ou onde deseja alterar (depois que estiver habilitado)!"></i></button>
+	<td><input class="btn span3" value="<?=$_POST['nome']?>&nbsp;<?=$_POST['sobrenome']
+    ?>" id="nome" onkeypress="return Onlychars(event)" disabled/><b onclick="myPencil0()">
+    <i class="icon-pencil" 
+    title="Para alterar basta clicar aqui, ou onde deseja alterar (depois que estiver
+     habilitado)!"></i></button>
 	</td>
 	</tr></p>
 
-	<p><tr><td><h5>Idade:</td><td><input class="btn btn-mini"  onkeypress="return Onlynumbers(event)" id="idade" value="<?=$_POST['idade']?>" size="7" maxlength="7" disabled></td></tr></p>
+	<p><tr><td><h5>Idade:</td><td><input class="btn btn-mini"  onkeypress="return
+     Onlynumbers(event)" id="idade" value="<?=$_POST['idade']?>" size="7" maxlength="7"
+      disabled></td></tr></p>
 
-	<p><tr><td><h5>Data:</td><td><input class="btn btn-mini" onkeypress="return Onlynumbers(event)"  id="data" value="<?=$_POST['date']?>" size="10" maxlength="10" disabled>
+	<p><tr><td><h5>Data:</td><td><input class="btn btn-mini" onkeypress="return
+     Onlynumbers(event)"  id="data" value="<?=$_POST['date']?>" size="10" maxlength="10"
+      pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"  disabled>
     </td></tr></p>
     
-    <p><tr><td><h5>Gênero:</td><td><input class="btn btn-mini" onkeypress="return Onlychars(event)"  
-     value="<?=$_POST['sexo']?>" id="sexo" size="9" maxlength="9" disabled></section></td></tr></p>
+    <p><tr><td><h5>Gênero:</td><td><input class="btn btn-mini" onkeypress="return
+     Onlychars(event)"  
+     value="<?=$_POST['sexo']?>" id="sexo" size="9" maxlength="9" disabled></section>
+     </td></tr></p>
     
     <p><tr><td><h5>RG:</td><td><input class="btn btn-mini"  value="<?=$_POST['rg']?>-<?=$_POST['rg2']?>" id="rg" size="12" maxlength="12" disabled></td></tr></p>   
     
-    <p><tr><td><h5>CPF:</td><td><input class="btn btn-mini" onkeypress="return Onlynumbers(event)" value="<?=$_POST['cpf']?>-<?=$_POST['cpf2']?>" id="cpf" size="12" maxlength="12" disabled></td></tr></p> 
+    <p><tr><td><h5>CPF:</td><td><input class="btn btn-mini" 
+    onkeypress="return Onlynumbers(event)" 
+    value="<?=$_POST['cpf']?>-<?=$_POST['cpf2']?>" id="cpf" size="12" maxlength="12"
+    disabled></td></tr></p> 
     
     </table>
 
@@ -144,19 +167,27 @@ $varcep 		= $_POST['cep'];
     <br>
 <table>
 
-    <tr>
-	<td>
-    <p onclick="window.print();"><input type="submit" class="btn bnt-mini btn-primary" id="ip" value="imprimir cadastro"></a>
-    </td></tr>
+    <div class="control-group">
+        <label class="control-label" for="imprimir">
+        <button type="button" class="btn bnt-mini btn-primary" onclick="window.print();"> Imprimir Cadastro </button></label>
+        <div class="controls">
+        </div>
+    </div>
 
 
+    <div class="control-group">
+        <label class="control-label" for="imprimir">
+        
+        <button type="button"  class="btn bnt-mini btn-primary" onclick="validarCampo1()">Enviar</button></label>
+        <div class="controls">
+        </div>
+    </div>
 
-    <tr>
-	<td>
-    <a href="pagina.html"> <input type="submit"  class="btn bnt-mini btn-primary" value="Enviar"></a>
-    </td></tr>
-
-</table>
+      
+      
+        </tr>
+        </table>
+    </div>
 
  <script>
 
@@ -264,11 +295,87 @@ $varcep 		= $_POST['cep'];
     document.getElementById("email").disabled = true; //desabilitado
     document.getElementById("dc").disabled = true; //desabilitado
  
-      document.getElementById("ip").focus();
+      document.getElementById("enviar").focus();
+  }
+  </script>
 
-    }
+  <script>
 
-    
+   
+
+     function validarCampo1(){ 
+if(document.getElementById("nome").value==""){
+        document.getElementById("nome").focus(); 
+        alert("O Campo nome é obrigatório!");
+        return false;
+        }   
+if(document.getElementById("idade").value==""){
+        document.getElementById("idade").focus(); 
+        alert("O Campo Idade é obrigatório!");
+        return false;
+        } 
+if(document.getElementById("data").value==""){
+        document.getElementById("data").focus(); 
+        alert("O Campo data é obrigatório!");
+        return false;
+        }
+if(document.getElementById("sexo").value==""){
+        document.getElementById("sexo").focus(); 
+        alert("O Campo gênero é obrigatório!");
+        return false;
+        }
+if(document.getElementById("rg").value==""){
+        document.getElementById("rg").focus(); 
+        alert("O Campo rg é obrigatório!");
+        return false;
+        }      
+if(document.getElementById("cpf").value==""){
+        document.getElementById("nome").focus(); 
+        alert("O Campo cpf é obrigatório!");
+        return false;
+        }                             
+if(document.getElementById("estado").value==""){
+        document.getElementById("estado").focus(); 
+        alert("O Campo estado é obrigatório!");
+        return false;
+        } 
+if(document.getElementById("cidade").value==""){
+        document.getElementById("cidade").focus(); 
+        return false;
+        alert("O Campo cidade é obrigatório!");
+        }
+if(document.getElementById("cep").value==""){
+        document.getElementById("cep").focus(); 
+        alert("O Campo cep é obrigatório!");
+        return false;
+        }
+if(document.getElementById("bairro").value==""){
+        document.getElementById("bairo").focus(); 
+        alert("O Campo bairo é obrigatório!");
+        return false;
+        } 
+if(document.getElementById("rua").value==""){
+        document.getElementById("nome").focus(); 
+        alert("O Campo nome é obrigatório!");
+        return false;
+        } 
+if(document.getElementById("nmr").value==""){
+        document.getElementById("nmr").focus(); 
+        alert("O Campo numero é obrigatório!");
+        return false;
+        }
+if(document.getElementById("email").value==""){
+        document.getElementById("email").focus(); 
+        alert("O Campo email é obrigatório!");
+        return false;
+        }              
+if(document.getElementById("dc").value==""){
+        document.getElementById("dc").focus(); 
+        alert("O Campo Documento é obrigatório!");
+        return false;
+        }                                         
+        document.getElementById("cadastro1").submit();
+        }
 
   </script>
 

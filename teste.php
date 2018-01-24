@@ -6,45 +6,41 @@
 <body>
 
 <script>
-// teste das constantes
-/*var semProblema = 1;
-var semProblema = 2;
-console.log('semProblema =', semProblema);
+/*var nome = 'Matheus';
+var es5 = 'Olá' + " " + nome + '!';
+var es6 = `
+Olá
+${nome}!`;
+console.log(es5, es6);*/
 
-var comProblema = 1;
-var comProblema = 2;
-console.log('comProblema =', comProblema)*/
+/*function upper(s){
+	return s.toUpperCase();
+}
+console.log(`1 + 1 = ${1 + 1}`);
+console.log(`Ei... ${upper('cuidado')}!`);*/
+ 
+
+ /*function tag (strings, ...values){
+ 	console.log(strings);
+ 	console.log(values)
+ 	return 'Outro valor';
+ }
+var aluno = 'Kar';
+var status = 'Reprovado';
+console.log(tag `${aluno} está ${status}`);*/
 
 
-// erro, por causa que tem que fazer a atribuição da constante e não pode atribuir o valor em outra linha.
-
-/*const a;
-a = 2;
-console.log('a =', a);*/
-
-/*var a = 2;
-var b = a; // copia do valor
-
-a --; // b continua com o valor original.
-
-b ++; // a continua com o valor original.
-
-console.log ('a =', a);*/
-
-/*var p1 = {nome: 'Ana'};
-var p2 = p1; //repete a constante anterior.
-p2.nome = 'Bia'; // altera a constante
-console.log('p1 =', p1);*/
-
-const produto = {
-	nome : 'Caneta',
-	preco: 2.59
-};
-produto.nome = 'Notebook';
-
-console.log(produto.nome);
-produto = {};
-
+function real(strings, ...values){
+	const resultado = [];
+	values.forEach(function(value, index){
+		value = (typeof value == 'number')
+		 ?'R$${value.toFixed(2)}' : value;
+		resultado.push(strings[index], value);
+	});
+return resultado.join('');
+}
+var preco = 29.99, parcela = 11;
+console.log(real`1x de ${preco} ou 3x de ${parcela}`);
 
 </script>
 
