@@ -6,7 +6,11 @@
 <body>
 
 <script>
-function soma(a = 1, b = 1){
+function defVal(){
+	return 2;
+}
+
+function soma(a = defVal() + 1, b = defVal()){
 	return a + b;
 }
 
