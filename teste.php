@@ -6,14 +6,13 @@
 <body>
 
 <script>
+//Rest agrupando elementos.
 
-
-var notasAlunos = [6.8, 7.9, 8.2];
-var turmaES6 = notasAlunos.concat([6.7, 8.9, 9.1]);
-var turmaES5 = [...notasAlunos, 6.7, 8.9, 9.1]
-console.log(turmaES5);
-console.log(turmaES6);
- 
+function media(...notas){
+	var total = notas.reduce((soma,nota) => soma + nota);
+	return total / notas.length;
+}
+console.log(media(7.3, 7.7, 6.0));
 </script>
 
 
