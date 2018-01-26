@@ -6,17 +6,14 @@
 <body>
 
 <script>
-var pai = {
-	func() { return 'Pai'; }
-
+function soma(a,b){
+	a = a || 1;
+	b = b || 1;
+	return a + b;
 }
 
-var filho = {
-	func() { return `${super.func()} + filho`; }
-}
+console.log(soma(), soma(2, 3), soma(0));
 
-Object.setPrototypeOf(filho, pai);
-console.log(filho.func());
 </script>
 
 
