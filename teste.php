@@ -7,8 +7,8 @@
 
 <script>
 function soma(a,b){
-	a = a || 1;
-	b = b || 1;
+	a = a !== undefined ? a : 1;
+	b = b !== undefined ? b : 1;
 	return a + b;
 }
 
