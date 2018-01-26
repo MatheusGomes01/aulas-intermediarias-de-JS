@@ -51,7 +51,7 @@ console.log(n, i);
 var {genero, situacao = 'Ativa'} = pessoa;
 console.log(genero, situacao);*/
 
-var pessoa = {
+/*var pessoa = {
 
 nome: 'Ana',
 endereco: {rua: 'A', numero: 1000}
@@ -62,7 +62,28 @@ console.log(rua, numero, cep);
 
 
 var { conta: { numero, agencia } } = pessoa;
-console.log(numero, agencia);
+console.log(numero, agencia);*/
+
+
+
+/*var [a] = [10];
+console.log(a);
+
+var[n1,,n3,,n5,n6 = 0] = [10,7,9,8];
+console.log(n1, n3, n5, n6);
+
+var [,[,nota]] = [[7,8,8], [9,6,8]];*/
+
+function rand({min = 0, max = 1000}){
+	var value = Math.random() * (max - min);
+	return Math.floor(value) + min;
+}
+
+console.log(rand({max: 50, min: 40}));
+console.log(rand({min: 955}));
+console.log(rand({}));
+console.log(rand());
+
 </script>
 
 
