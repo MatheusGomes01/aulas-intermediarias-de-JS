@@ -74,7 +74,7 @@ console.log(n1, n3, n5, n6);
 
 var [,[,nota]] = [[7,8,8], [9,6,8]];*/
 
-function rand({min = 0, max = 1000}){
+/*function rand({min = 0, max = 1000}){
 	var value = Math.random() * (max - min);
 	return Math.floor(value) + min;
 }
@@ -82,7 +82,21 @@ function rand({min = 0, max = 1000}){
 console.log(rand({max: 50, min: 40}));
 console.log(rand({min: 955}));
 console.log(rand({}));
+console.log(rand());*/
+
+
+function rand({min = 0, max = 1000}){
+	if(min > max) [min, max] = [ max, min];
+	var value = Math.random() * (max - min);
+	return Math.floor(value) + min;
+}
+
+console.log(rand([50, 40]));
+console.log(rand([992]));
+console.log(rand([,10]));
+console.log(rand([]));
 console.log(rand());
+
 
 </script>
 
