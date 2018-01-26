@@ -6,19 +6,13 @@
 <body>
 
 <script>
-
-var nome = 'Bia', anoNascimento = 1981;
-function idade() {
-	return new Date().getFullYear() - anoNascimento;
+var nomeAttr = 'nome';
+var valorAttr = 'Davi';
+var dinamico = {
+	[nomeAttr] : valorAttr
 }
 
-var pessoa = {
-	nome: nome,
-	anoNascimento: anoNascimento,
-	idade: idade,
-	toString: function(){return `${nome} = ${idade()}`}
-};
-console.log(pessoa.toString());
+document.write(dinamico.nome);
 </script>
 
 
