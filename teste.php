@@ -13,7 +13,7 @@ function soma(a,b){
 }
 
 console.log(soma(), soma(2, 3), soma(0));
-
+fhbfdhfdhd
 </script>
 
 
