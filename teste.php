@@ -6,13 +6,16 @@
 <body>
 
 <script>
-var nomeAttr = 'nome';
-var valorAttr = 'Davi';
-var dinamico = {
-	[nomeAttr] : valorAttr
+var sequence = {
+	__id: 1,
+	get id() { return this.__id++;},
+	set id(id) { this.__id = id;} 
 }
 
-document.write(dinamico.nome);
+
+console.log (sequence.id, sequence.id);
+sequence.id = 100;
+console.log(sequence.id, sequence.id);
 </script>
 
 
