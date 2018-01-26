@@ -6,16 +6,15 @@
 <body>
 
 <script>
-var sequence = {
-	__id: 1,
-	get id() { return this.__id++;},
-	set id(id) { this.__id = id;} 
-}
+var avo = { attr1: 'A'};
+var pai = { __proto__: avo, attr2: 'B'};
+var filho = { __proto__: pai, attr3: 'C' };
+console.log(filho.attr1, filho.attr2, filho.attr3);
 
-
-console.log (sequence.id, sequence.id);
-sequence.id = 100;
-console.log(sequence.id, sequence.id);
+var mae = { corCabelo: 'Castanho Escuro'};
+var filha = {};
+Object.setPrototypeOf(filha, mae);
+console.log('Cor do cabelo =',filha.corCabelo);
 </script>
 
 
