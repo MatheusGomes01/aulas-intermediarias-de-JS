@@ -6,51 +6,58 @@
 <body>
 
 <script>
-// Arrow function
-var estoque = [
-{nome: 'Resma de Papel A4', preco : 19.90, qtde: 300, fragil: false},
-{nome: 'Monitor LG 29 IPS', preco : 1699, qtde: 15, fragil: true},
-{nome: 'Ovos Brancos - 30 Unid.', preco : 18.99, qtde: 21, fragil: true},
-{nome: 'Pneu Pirelli Scorpion Aro 19', preco : 1027.34, qtde: 16, fragil: false},
-{nome: 'Apple Ipad Pro 32gb - Tela 12,9', preco : 3999, qtde: 17, fragil: true},
-];
-const qtdeProdutosCarosEFrageis = estoque
-.filter(function(item){
-	return item.preco >= 1000;
-})
-.filter(function(item){
-	return item.fragil;
-})
-.map(function(item){
-	return item.qtde;
-})
-.reduce(function  (total, qtde){
-	return total + qtde;
-});
+/*'use strict'
 
-console.log(qtdeProdutosCarosEFrageis);
-</script>
+this.desc = 'Sou ue... :P';
+console.log(this.desc);
 
-<script>
-// Arrow function
-var estoque = [
-{nome: 'Resma de Papel A4', preco : 19.90, qtde: 300, fragil: false},
-{nome: 'Monitor LG 29 IPS', preco : 1699, qtde: 15, fragil: true},
-{nome: 'Ovos Brancos - 30 Unid.', preco : 18.99, qtde: 21, fragil: true},
-{nome: 'Pneu Pirelli Scorpion Aro 19', preco : 1027.34, qtde: 16, fragil: false},
-{nome: 'Apple Ipad Pro 32gb - Tela 12,9', preco : 3999, qtde: 17, fragil: true},
-];
-const isPrecoAlto = item => item.preco >= 1000;
-const isFragil = item => item.fragil;
-const somatorio = (total, qtde) => total + qtde;
+const func = function(){
+	console.log(this === undefined);
+}
+func() ;*/
 
-const qtdeProdutosCarosEFrageis = estoque
-.filter(isPrecoAlto)
-.filter(isFragil)
-.map(item => item.qtde)
-.reduce(somatorio);
+/*this.desc = 'Sou o module.exports... :P';
+const obj = {desc: 'Sou o obj... :P'};
 
-console.log(qtdeProdutosCarosEFrageis);
+const func = function(){
+	console.log(this);
+}
+func();
+
+const funcBind = func.bind(obj);
+funcBind();
+
+const arrowFunc = () => console.log(this);
+
+const arrowFuncBind = arrowFunc.bind(obj);
+arrowFuncBind();*/
+
+function Pessoa(){
+	var self = this;
+	self.idade = 0;
+
+	setInterval(function(){
+		self.idade++;
+		console.log(self.idade);
+	}, 1000);
+}
+
+new Pessoa();
+
+//ou 
+
+function Pessoa(){
+	self.idade = 0;
+
+	setInterval(() => {
+		self.idade++;
+		console.log(self.idade);
+	}, 1000);
+}
+
+new Pessoa();
+
+
 </script>
 
 
