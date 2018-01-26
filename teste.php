@@ -6,15 +6,13 @@
 <body>
 
 <script>
-function defVal(){
-	return 2;
+function click(callback = function() {}){
+	callback();
 }
 
-function soma(a = defVal() + 1, b = defVal()){
-	return a + b;
-}
-
-console.log(soma(), soma(2, 3), soma (0));
+click(); //ok
+click(undefined); //ok
+click(null);
  
 </script>
 
