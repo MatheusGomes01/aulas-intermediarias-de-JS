@@ -47,7 +47,7 @@ new Pessoa();
 //ou 
 
 function Pessoa(){
-	self.idade = 0;
+	self.idade = 100;
 
 	setInterval(() => {
 		self.idade++;
